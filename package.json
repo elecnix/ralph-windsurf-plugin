@@ -1,0 +1,31 @@
+{
+  "name": "vscode-focus-tracker",
+  "displayName": "Focus Tracker",
+  "description": "Logs which VS Code component has keyboard focus.",
+  "version": "0.0.1",
+  "publisher": "ralph",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/src/extension.js",
+  "contributes": {},
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "tsc -p . --noEmit",
+    "test": "npm run build && node ./test/e2e/runTests.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.5",
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-electron": "^2.4.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.4.5"
+  }
+}
